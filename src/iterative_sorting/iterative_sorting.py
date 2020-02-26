@@ -21,16 +21,32 @@ def selection_sort(arr):
 
     return arr
 
-arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
-arr3 = [0, 1, 2, 3, 4, 5]
-print('selection sort, arr1: ', selection_sort(arr1))
-print('selection sort, arr3: ', selection_sort(arr3))
+#arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+#arr3 = [0, 1, 2, 3, 4, 5]
+#print('selection sort, arr1: ', selection_sort(arr1))
+#print('selection sort, arr3: ', selection_sort(arr3))
 
 
 # TO-DO:  implement the Bubble Sort function below
-def bubble_sort( arr ):
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for x in range(0, n-i -1):
+
+            if arr[x] > arr[x+1]:
+                arr[x], arr[x+1] = arr[x+1], arr[x]
+# compare twe sequencial indexes i and i + 1
+# If i+1 < i, swap value and move index forward by 1
+# Repeat until no swap is made during a pass
 
     return arr
+
+#arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+#arr2 = []
+#arr3 = [0, 1, 2, 3, 4, 5]
+#print('bubblesort, arr1', bubble_sort(arr1))
+#print('bubblesort, arr2', bubble_sort(arr2))
+#print('bubblesort, arr3', bubble_sort(arr3))
 
 
 # STRETCH: implement the Count Sort function below
